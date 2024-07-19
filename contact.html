@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <h4><a href="index.html">© Code by Pawan</a></h4>
+            <div class="right-nav">
+                <a id="work" href="work.html">Work <i class="ri-circle-fill"></i></a>
+                <a id="contact" href="contact.html">Contact <i class="ri-circle-fill"></i></a>
+            </div>
+        </nav>
+        <h1>LET'S MAKE IT <i class="ri-message-3-line"></i> <br><span>HAPPEN</span></h1>
+        <div class="btns">
+            <button><i class="ri-mail-line"></i> <a href="mailto:pawanbisht2001@gmail.com">pawanbisht2001@gmail.com</a></button>
+            or
+            <button><i class="ri-phone-fill"></i> <a href="tel:+918882674828">+918882674828</a></button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        gsap.from('.main h1',{
+            x: -500,
+            opacity: 0,
+            duration: 1,
+        })
+
+        gsap.from('.main .btns',{
+            x: 500,
+            opacity: 0,
+            duration: 1,
+        })
+    </script>
+</body>
+</html>

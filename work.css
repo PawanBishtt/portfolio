@@ -1,0 +1,410 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: neuer;
+    color: #1c1d20;
+}
+
+@font-face {
+  font-family: neuer;
+  src: url(assets/fonts/NeueMontreal-Regular.otf);
+}
+
+@font-face {
+  font-family: neuem;
+  src: url(assets/fonts/NeueMontreal-Medium.otf);
+}
+
+@font-face {
+  font-family: neuel;
+  src: url(assets/fonts/NeueMontreal-Light.otf);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    padding: 3vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav h4 a{
+    font-weight: 500;
+    text-decoration: none;
+}
+
+nav .right-nav {
+    display: flex;
+    gap: 3vw;
+    z-index: 2;
+}
+
+.right-nav a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+    font-weight: 500;
+}
+
+.right-nav a i {
+    font-size: .5vw;
+    scale: 0;
+    transition: all ease 0.3s;
+}
+
+.right-nav a:nth-child(1):hover i {
+    scale: 1;
+}
+
+.right-nav a:nth-child(2):hover i {
+    scale: 1;
+}
+
+.right-nav a:nth-child(3):hover i {
+    scale: 1;
+}
+
+section {
+    width: 70%;
+    margin: 0vw auto 17vw auto;
+}
+
+.hero h1 {
+  width: 70%;
+    font-size: 6vw;
+    font-family: neuel;
+}
+
+.radius {
+    width: 100vw;
+    height: 40vh;
+    background-color: white;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    position: absolute;
+    bottom: 18%;
+    scale: 1.2;
+    z-index: 99;
+}
+
+.part-2 {
+    margin-top: 10vw;
+}
+
+.tworight .right-elem {
+    border-bottom: 1px solid silver;
+    padding-top: 1vw;
+    cursor: pointer;
+}
+
+.right-elem:hover {
+    border-bottom: 1px solid black;
+}
+
+.tworight .elem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.elem .icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.elem h2 {
+    color: black;
+    font-size: 2vw;
+    font-weight: 400;
+}
+
+.icon i {
+    font-size: 1.5vw;
+}
+
+.elem p {
+    color: grey;
+}
+
+.right-elem img {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 100%;
+    object-fit: cover;
+    scale: 0;
+}
+
+.contact {
+    height: 100vh;
+    background-color: #1c1d20;
+}
+
+.contact .work {
+    width: 70%;
+    margin: 0 auto;
+    border-bottom: 1px solid silver;
+    padding: 10vw 0vw 5vw 0vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.work i {
+    font-size: 3vw;
+    font-weight: 100;
+}
+
+.work h1 {
+    font-size: 6vw;
+    font-weight: 400;
+    line-height: 6vw;
+    color: white;
+}
+
+.work h1 span img {
+    width: 5vw;
+}
+
+.work .btn {
+    width: 12vw;
+    height: 12vw;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    background-color: #455ce9;
+    border-radius: 100%;
+    cursor: pointer;
+    position: absolute;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    bottom: -20%;
+    right: 8%;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.work .btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #334BD3;
+    transform: translateY(100%);
+    transition: all .3s;
+    z-index: -1;
+    border-radius: 100%;
+}
+
+.work .btn:hover::before {
+    transform: translateY(0);
+    border-radius: 0%;
+}
+
+.work .btn p {
+    transform: translateZ(50px);
+    color: white;
+}
+
+.btns {
+    width: 70%;
+    margin: 0 auto;
+    padding: 10vw 0vw;
+    display: flex;
+    gap: 2vw;
+}
+
+.btns .Btn {
+    position: relative;
+    width: 260px;
+    height: 55px;
+    border-radius: 45px;
+    padding: 2vw 10vw;
+    border: none;
+    background-color: transparent;
+    border: 1px solid silver;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  .Btn:nth-child(2) {
+    padding: 2vw 5vw;
+  }
+  
+  .Btn::before {
+    width: 70%;
+    height: 2px;
+    position: absolute;
+    content: "";
+    filter: blur(1px);
+    top: 7px;
+    border-radius: 50%;
+  }
+  
+  .Btn::after {
+    width: 70%;
+    height: 2px;
+    position: absolute;
+    content: "";
+    filter: blur(1px);
+    bottom: 7px;
+    border-radius: 50%;
+  }
+  
+  .Btn:hover {
+    animation: jello-horizontal 0.5s both;
+    background-color: #455ce9;
+    border: 1px solid #455ce9;
+  }
+  
+  @keyframes jello-horizontal {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+  
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+  
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+  
+    65% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+  
+    75% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+  
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+
+  @media (max-width: 768px){
+   .hero h1 {
+        font-size: 10vw;
+        margin: 30vw 0vw 0vw -1vw;
+        font-weight: 400;
+        width: 90%;
+    }
+
+    section {
+        width: 90%;
+        margin: 0vw auto 17vw auto;
+    }
+
+    .elem h2 {
+        color: black;
+        font-size: 6vw;
+        font-weight: 400;
+        padding-bottom: 5vw;
+        border-bottom: 1px solid grey;
+      }
+      
+      .tworight .right-elem {
+        border-bottom: none;
+        padding-top: 1vw;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 3vw;
+        margin-bottom: 15vw;
+      }
+      
+      
+      .tworight .elem {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 5vw;
+      }
+      
+      .right-elem img {
+        width: 100%;
+        height: auto;
+        border-radius: 0%;
+        object-fit: cover;
+        scale: 1;
+      }
+      
+      .radius {
+       display: none;
+      }
+
+      .contact .work {
+        width: 90%;
+        margin: 0 auto;
+        padding: 20vw 0vw;
+        position: relative;
+      }
+      
+      .work i {
+        font-size: 7vw;
+      }
+      
+      .work h1 {
+        font-size: 12vw;
+        line-height: 12vw;
+      }
+      
+      .work h1 span img {
+        width: 10vw;
+      }
+      
+      .work .btn {
+        width: 37vw;
+        height: 37vw;
+        bottom: -28%;
+      }
+      
+      .btns {
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 50vw;
+        display: flex;
+        flex-direction: column;
+        gap: 3vw;
+      }
+      
+      .btns .Btn {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-radius: 45px;
+        padding: 7vw 10vw;
+        border: none;
+        background-color: transparent;
+        border: 1px solid silver;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+      }
+  }
