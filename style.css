@@ -286,24 +286,18 @@ nav .right-nav {
   top: 48%;
   left: 15%;
   position: absolute;
-  opacity: 0.3;
-  color: black;
-  font-weight: 400;
-  font-size: 2.3vw;
-  line-height: 3.3vw;
 }
 
-.part1-left-fill {
-  width: 0%;
-  left: 15%;
-  top: 48%;
-  white-space: nowrap;
+.part1-left p {
+  background-color: white;
   overflow: hidden;
-  position: absolute;
+}
+
+.part1-left p span {
   color: black;
-  font-weight: 400;
   font-size: 2.3vw;
   line-height: 3.3vw;
+  display: inline-block;
 }
 
 .part1-right {
@@ -313,9 +307,15 @@ nav .right-nav {
 }
 
 .part1-right p {
+  background-color: white;
+  overflow: hidden;
+}
+
+.part1-right p span{
   color: black;
   line-height: 2.3vw;
   font-size: 1.2vw;
+  display: inline-block;
 }
 
 .abt-btn {

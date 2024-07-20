@@ -157,21 +157,34 @@ if (window.matchMedia("(min-width: 1025px)").matches){
   workbtn()
 }
 
-if (window.matchMedia("(min-width: 1025px)").matches){
-  function textfill(){
-    gsap.to('.part1-left-fill',{
-      width: '100%',
-      scrollTrigger: {
-        trigger: '.part-1',
-        scroller: '.main',
-        start: 'top 50%',
-        end: 'top top',
-        scrub: 3,
-      }
-    })
-  }
-  textfill()
+function textsplit(){
+  gsap.from('.part1-right p span',{
+    y: 100,
+    duration: 1,
+    stagger: .1,
+     ease: "power3.out",
+    scrollTrigger: {
+      trigger: '.part-1',
+      scroller: '.main',
+      start: 'top 70%',
+      toggleActions:'play none none reset',
+    }
+  })
+
+  gsap.from('.part1-left p span',{
+    y: 100,
+    duration: 1,
+    stagger: .1,
+     ease: "power3.out",
+    scrollTrigger: {
+      trigger: '.part-1',
+      scroller: '.main',
+      start: 'top 60%',
+      toggleActions:'play none none reset',
+    }
+  })
 }
+textsplit()
 
 window.addEventListener('load',function(){
 const tl = gsap.timeline();
