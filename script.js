@@ -44,13 +44,13 @@ loco()
 
 if (window.matchMedia("(min-width: 1025px)").matches) {
   function menu() { 
-    var menu = document.querySelector('.menu');
+    var menu = document.querySelector('#openbtn');
     gsap.to(menu,{
-      opacity: 1,
+      scale: 1,
       scrollTrigger:{
         trigger: '.hero',
         scroller: '.main',
-        start: '30% top',
+        start: 'top%',
         scrub: 1,
 
       }
@@ -61,15 +61,14 @@ if (window.matchMedia("(min-width: 1025px)").matches) {
 
 if (window.matchMedia("(max-width: 950px)").matches) {
   function menu() { 
-    var menu = document.querySelector('.menu');
+    var menu = document.querySelector('#openbtn');
     gsap.to(menu,{
-      opacity: 1,
+      scale: 1,
       scrollTrigger:{
         trigger: '.hero',
         scroller: '.main',
         start: 'bottom bottom',
         scrub: 1,
-
       }
     })
     }
@@ -174,11 +173,8 @@ if (window.matchMedia("(min-width: 1025px)").matches){
   textfill()
 }
 
-
-const loadercontainer = document.querySelector('.loader')
-
-
 window.addEventListener('load',function(){
+const loadercontainer = document.querySelector('.loader')
   gsap.to(loadercontainer,{
     opacity: 0,
     display: 'none',
@@ -186,3 +182,49 @@ window.addEventListener('load',function(){
     duration: 1,
   })
 })
+
+function sidebar(){
+  const tl = gsap.timeline({paused: true});
+
+  tl.to('.main',{
+     filter: "blur(10px)"
+  },'a')
+
+  tl.to('.menu',{
+    backgroundColor: '#334bd3',
+    border: 'none'
+  },'a')
+  
+  tl.to('.menu #closebtn',{
+   scale: 1
+  },'a')
+  
+  tl.to('.menu #openbtn',{
+    scale: 0
+   },'a')
+  
+  tl.from('#sidemenu',{
+   x: 700,
+   duration: 1,
+  },'a')
+  
+  tl.to('#sidemenu',{
+    scaleX: 1,
+    duration: 1,
+   },'a')
+  
+  tl.from('#sidemenu h2',{
+    x: 500,
+    stagger: .1,
+    delay: .2
+  },'a')
+  
+  
+  document.querySelector('.menu #openbtn').addEventListener('click',function(){
+    tl.play()
+  })
+  document.querySelector('.menu #closebtn').addEventListener('click',function(){
+    tl.reverse()
+  })
+}
+sidebar()
