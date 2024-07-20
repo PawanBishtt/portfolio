@@ -174,12 +174,67 @@ if (window.matchMedia("(min-width: 1025px)").matches){
 }
 
 window.addEventListener('load',function(){
-const loadercontainer = document.querySelector('.loader')
-  gsap.to(loadercontainer,{
-    opacity: 0,
-    display: 'none',
-    duration: 1,
-  })
+const tl = gsap.timeline();
+tl.to('.loader .loadtext1',{
+  opacity: 1,
+  duration: 0.2,
+})
+
+tl.to('.loader .loadtext1',{
+  opacity: 0,
+  duration: 0.2,
+})
+
+tl.to('.loader .loadtext2',{
+  opacity: 1,
+  duration: 0.2,
+})
+
+tl.to('.loader .loadtext2',{
+  opacity: 0,
+  duration: 0.2,
+})
+
+tl.to('.loader .loadtext3',{
+  opacity: 1,
+  duration: 0.2,
+})
+
+tl.to('.loader .loadtext3',{
+  opacity: 0,
+  duration: 0.2,
+})
+
+tl.to('.loader .loadtext4',{
+  opacity: 1,
+  duration: 0.2,
+})
+
+tl.to('.loader .loadtext4',{
+  opacity: 0,
+  duration: 0.2,
+})
+
+tl.to('.loader .loadtext5',{
+  opacity: 1,
+  duration: 0.2,
+})
+
+tl.to('.loader .loadtext5',{
+  opacity: 0,
+  duration: 0.2,
+})
+
+tl.to('.loader',{
+  y: -800,
+  duration: 2,
+  ease: "expo.out",
+})
+
+tl.to('.loader',{
+  display: 'none'
+})
+
 })
 
 function sidebar(){
