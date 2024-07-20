@@ -178,7 +178,6 @@ const loadercontainer = document.querySelector('.loader')
   gsap.to(loadercontainer,{
     opacity: 0,
     display: 'none',
-    delay:2,
     duration: 1,
   })
 })
