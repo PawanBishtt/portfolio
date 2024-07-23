@@ -178,6 +178,17 @@ nav .right-nav {
   scale: 1;
 }
 
+nav .right-nav2 {
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+  scale: 0;
+}
+
+nav .right-nav2 i{
+  font-size: 2vw;
+}
+
 .hero-left {
   position: absolute;
   top: 45%;
@@ -235,6 +246,10 @@ nav .right-nav {
   font-size: 14vw;
   font-weight: 400;
   animation: text 15s linear infinite;
+}
+
+.menu {
+  transition: all ease 0.3s;
 }
 
 .menu #openbtn {
@@ -706,7 +721,7 @@ nav .right-nav {
     color: #999d9e;
     width: 100%;
     margin: 0 auto;
-    margin-top: 60vw;
+    margin-top: 50vw;
     border-top: 1px solid grey;
     padding-top: 5vw;
   }
@@ -747,6 +762,14 @@ nav .right-nav {
 
   nav {
     padding: 5vw 3vw;
+  }
+
+  nav .right-nav {
+    display: none;
+  }
+
+  nav .right-nav2 {
+    scale: 1;
   }
 
   .hero-left {
@@ -791,11 +814,14 @@ nav .right-nav {
     position: static;
     opacity: 1;
     font-size: 6vw;
-    line-height: 10vw;
+    line-height: 0vw;
   }
 
-  .part1-left-fill {
-    display: none;
+  .part1-left p span {
+    color: black;
+    font-size: 4vw;
+    line-height: 7vw;
+    display: inline-block;
   }
 
   .part1-right {
@@ -804,9 +830,11 @@ nav .right-nav {
     margin-top: 15vw;
   }
 
-  .part1-right p {
+  .part1-right p span{
+    color: black;
     line-height: 6vw;
-    font-size: 4vw;
+    font-size: 3.2vw;
+    display: inline-block;
   }
 
   .abt-btn {
