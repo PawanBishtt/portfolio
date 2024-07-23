@@ -121,39 +121,44 @@ if (window.matchMedia("(min-width: 1025px)").matches) {
     rightelem();
 }
 
-function radius() {
-    gsap.to('.radius', {
-        y: '-125%',
-        scrollTrigger: {
-            trigger: '.contact',
-            scroller: '.main',
-            scrub: 2,
-            start: 'top 55%',
-            end: 'top 10%',
-        }
-    })
+if (window.matchMedia("(min-width: 1025px)").matches) {
+    function radius() {
+        gsap.to('.radius', {
+            y: '-125%',
+            scrollTrigger: {
+                trigger: '.contact',
+                scroller: '.main',
+                scrub: 2,
+                start: 'top 55%',
+                end: 'top 10%',
+            }
+        })
+    }
+    radius()
 }
-radius()
 
-function workbtn() {
-    gsap.from('.work .btn', {
-        x: -500,
-        scrollTrigger: {
-            trigger: '.contact',
-            scroller: '.main',
-            scrub: 2,
-            start: 'top 45%',
-            end: 'top 10%'
-        }
-    })
+if (window.matchMedia("(min-width: 1025px)").matches) {
+    function workbtn() {
+        gsap.from('.work .btn', {
+            x: -500,
+            scrollTrigger: {
+                trigger: '.contact',
+                scroller: '.main',
+                scrub: 2,
+                start: 'top 45%',
+                end: 'top 10%'
+            }
+        })
+    }
+    workbtn()
 }
-workbtn()
+
 
 function sidebar() {
-    const tl = gsap.timeline({ paused: true });
+    const tl = gsap.timeline({ paused: true,  force3D: true});
 
     tl.to('.main', {
-        filter: "blur(10px)"
+        filter: "blur(5px)"
     }, 'a')
 
     tl.to('.menu', {
