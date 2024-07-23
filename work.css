@@ -193,6 +193,17 @@ nav .right-nav {
     scale: 1;
 }
 
+nav .right-nav2 {
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+  scale: 0;
+}
+
+nav .right-nav2 i{
+  font-size: 2vw;
+}
+
 section {
     width: 70%;
     margin: 0vw auto 17vw auto;
@@ -530,6 +541,14 @@ section {
     width: 17vw;
     height: 17vw;
     font-size: 7vw;
+    }
+
+    nav .right-nav {
+      display: none;
+    }
+
+    nav .right-nav2 {
+      scale: 1;
     }
 
    .hero h1 {

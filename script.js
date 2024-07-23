@@ -141,21 +141,19 @@ if (window.matchMedia("(min-width: 1025px)").matches) {
   radius()
 }
 
-if (window.matchMedia("(min-width: 1025px)").matches) {
-  function workbtn() {
-    gsap.from('.work .btn', {
-      x: -500,
-      scrollTrigger: {
-        trigger: '.contact',
-        scroller: '.main',
-        scrub: 2,
-        start: 'top 45%',
-        end: 'top 10%'
-      }
-    })
-  }
-  workbtn()
+function workbtn() {
+  gsap.from('.work .btn', {
+    x: -500,
+    scrollTrigger: {
+      trigger: '.contact',
+      scroller: '.main',
+      scrub: 2,
+      start: 'top 45%',
+      end: 'top 10%'
+    }
+  })
 }
+workbtn()
 
 function textsplit() {
   gsap.from('.part1-right p span', {
