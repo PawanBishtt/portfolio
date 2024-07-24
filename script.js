@@ -51,7 +51,7 @@ if (window.matchMedia("(min-width: 1025px)").matches) {
         trigger: '.hero',
         scroller: '.main',
         start: '10% top',
-        toggleActions: 'play none none reset',
+        toggleActions: 'play none none reverse',
       }
     })
   }
@@ -67,7 +67,7 @@ if (window.matchMedia("(max-width: 950px)").matches) {
         trigger: '.hero',
         scroller: '.main',
         start: 'bottom bottom',
-        toggleActions: 'play none none reset',
+        toggleActions: 'play none none reverse',
 
       }
     })
@@ -166,8 +166,8 @@ function textsplit() {
     scrollTrigger: {
       trigger: '.part-1',
       scroller: '.main',
-      start: 'top 70%',
-      toggleActions: 'play none none reset',
+      start: 'top 60%',
+      toggleActions: 'play none none reverse',
     }
   })
 
@@ -180,7 +180,7 @@ function textsplit() {
       trigger: '.part-1',
       scroller: '.main',
       start: 'top 60%',
-      toggleActions: 'play none none reset',
+      toggleActions: 'play none none reverse',
     }
   })
 }
