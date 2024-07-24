@@ -197,7 +197,7 @@ nav .right-nav2 {
   display: flex;
   gap: 2vw;
   align-items: center;
-  scale: 0;
+  display: none;
 }
 
 nav .right-nav2 i{
@@ -548,7 +548,7 @@ section {
     }
 
     nav .right-nav2 {
-      scale: 1;
+      display: block;
     }
 
    .hero h1 {

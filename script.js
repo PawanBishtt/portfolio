@@ -191,7 +191,7 @@ function codebypawan() {
     y: 50,
   })
 }
-textsplit()
+codebypawan()
 
 window.addEventListener('load', function () {
   const tl = gsap.timeline();
