@@ -141,6 +141,14 @@ nav {
 
 nav h4 {
   font-weight: 500;
+  background-color: transparent;
+  overflow: hidden;
+  cursor: pointer;
+  height: max-content;
+}
+
+nav h4 span {
+  display: inline-block;
 }
 
 nav .right-nav {
@@ -192,20 +200,26 @@ nav .right-nav2 i{
 .hero-left {
   position: absolute;
   top: 45%;
-  width: 17vw;
+  width: 18vw;
   height: 15vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4vw;
+  gap: 3vw;
   background-color: #1c1d20;
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
+  padding-left: 2vw;
+}
+
+.hero-left p {
+  font-weight: 400;
+  font-size: 1.2vw;
 }
 
 .globe {
-  width: 5vw;
-  height: 5vw;
+  width: 4.7vw;
+  height: 4.7vw;
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -221,13 +235,14 @@ nav .right-nav2 i{
   position: absolute;
   display: flex;
   flex-direction: column;
-  gap: 3vw;
-  top: 40%;
+  gap: 1vw;
+  top: 45%;
   right: 10%;
 }
 
 .hero-right i {
   font-size: 3vw;
+  font-weight: 100;
 }
 
 .hero-right h2 {

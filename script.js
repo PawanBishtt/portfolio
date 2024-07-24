@@ -66,7 +66,7 @@ if (window.matchMedia("(max-width: 950px)").matches) {
       scrollTrigger: {
         trigger: '.hero',
         scroller: '.main',
-        start: 'bottom bottom',
+        start: 'bottom 90%',
         toggleActions: 'play none none reverse',
 
       }
@@ -182,6 +182,13 @@ function textsplit() {
       start: 'top 60%',
       toggleActions: 'play none none reverse',
     }
+  })
+}
+textsplit()
+
+function codebypawan() {
+  gsap.from('nav h4 span', {
+    y: 50,
   })
 }
 textsplit()

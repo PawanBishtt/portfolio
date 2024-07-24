@@ -46,7 +46,7 @@ if (window.matchMedia("(min-width: 1025px)").matches) {
                 trigger: '.hero',
                 scroller: '.main',
                 start: '10% top',
-                toggleActions: 'play none none reset',
+                toggleActions: 'play none none reverse',
 
             }
         })
@@ -63,7 +63,7 @@ if (window.matchMedia("(max-width: 950px)").matches) {
                 trigger: '.hero',
                 scroller: '.main',
                 start: 'top 10%',
-                toggleActions: 'play none none reset',
+                toggleActions: 'play none none reverse',
 
             }
         })
