@@ -548,7 +548,7 @@ section {
     }
 
     nav .right-nav2 {
-      display: block;
+      display: flex;
     }
 
    .hero h1 {
