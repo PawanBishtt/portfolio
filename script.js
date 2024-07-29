@@ -258,7 +258,11 @@ window.addEventListener('load', function () {
 })
 
 function sidebar() {
-  const tl = gsap.timeline({ paused: true,  force3D: true });
+  const tl = gsap.timeline({ paused: true});
+
+  tl.to('.main', {
+    filter: "blur(5px)"
+  }, 'a')
 
   tl.to('.menu', {
     backgroundColor: '#334bd3',
