@@ -155,50 +155,52 @@ if (window.matchMedia("(min-width: 1025px)").matches) {
 
 
 function sidebar() {
-    const tl = gsap.timeline({ paused: true});
-
+    const tl = gsap.timeline({ paused: true });
+  
     tl.to('.main', {
-        filter: "blur(5px)"
-    }, 'a')
-
+      opacity: 0.5 // Replace blur with opacity reduction
+    }, 'a');
+  
     tl.to('.menu', {
-        backgroundColor: '#334bd3',
-        border: 'none'
-    }, 'a')
-
+      backgroundColor: '#334bd3',
+      border: 'none'
+    }, 'a');
+  
     tl.to('.menu #closebtn', {
-        scale: 1
-    }, 'a')
-
+      scale: 1
+    }, 'a');
+  
     tl.to('.menu #openbtn', {
-        scale: 0
-    }, 'a')
-
+      scale: 0
+    }, 'a');
+  
     tl.from('#sidemenu', {
-        x: 700,
-        borderLeftRadius: '100%',
-        duration: 1,
-    }, 'a')
-
+      x: 700,
+      duration: 1
+    }, 'a');
+  
     tl.to('#sidemenu', {
-        scaleX: 1,
-        duration: 1,
-    }, 'a')
-
+      scaleX: 1, 
+      duration: 1
+    }, 'a');
+  
     tl.from('#sidemenu h2', {
-        x: 500,
-        stagger: .1,
-        delay: .2
-    }, 'a')
-
+      x: 500,
+      stagger: .05, // Adjust stagger value if needed
+      delay: .2
+    }, 'a');
+  
     document.querySelector('nav .right-nav2 p').addEventListener('click', function () {
-        tl.play()
-    })
+      tl.play();
+    });
+  
     document.querySelector('.menu #openbtn').addEventListener('click', function () {
-        tl.play()
-    })
+      tl.play();
+    });
+  
     document.querySelector('.menu #closebtn').addEventListener('click', function () {
-        tl.reverse()
-    })
-}
-sidebar()
+      tl.reverse();
+    });
+  }
+  
+  sidebar();
