@@ -48,7 +48,6 @@ body {
   background-color: #1c1d20;
   padding: 8vw 5vw 0vw 5vw;
   transform: translateX(100%);
-  border-radius: 100%;
 }
 
 #sidemenu p {
@@ -680,8 +679,7 @@ nav .right-nav2 i{
     height: 100vh;
     background-color: #1c1d20;
     padding: 25vw 7vw 0vw 7vw;
-    transform: scaleX(0);
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    transform: translateX(100%);
   }
   
   #sidemenu p {

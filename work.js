@@ -153,13 +153,8 @@ if (window.matchMedia("(min-width: 1025px)").matches) {
     workbtn()
 }
 
-
 function sidebar() {
     const tl = gsap.timeline({ paused: true });
-  
-    tl.to('.main', {
-      opacity: 0.5 // Replace blur with opacity reduction
-    }, 'a');
   
     tl.to('.menu', {
       backgroundColor: '#334bd3',
@@ -174,14 +169,10 @@ function sidebar() {
       scale: 0
     }, 'a');
   
-    tl.from('#sidemenu', {
-      x: 700,
-      duration: 1
-    }, 'a');
-  
     tl.to('#sidemenu', {
-      scaleX: 1, 
-      duration: 1
+      x: '0', 
+      borderRadius: '0',
+      duration: 0.7
     }, 'a');
   
     tl.from('#sidemenu h2', {
