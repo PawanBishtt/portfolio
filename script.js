@@ -246,9 +246,11 @@ window.addEventListener('load', function () {
   })
 
   tl.to('.loader', {
-    y: -1000,
-    duration: 2,
-    ease: "expo.out",
+    height: 0,
+    padding: 0,
+    overflow: 'hidden',
+    duration:1,
+    ease: "expo.inOut",
   })
 
   tl.to('.loader', {
