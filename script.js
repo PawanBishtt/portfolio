@@ -278,7 +278,8 @@ function sidebar() {
   tl.to('#sidemenu', {
     x: '0', 
     borderRadius: '0',
-    duration: 0.7
+    duration: 1.3,
+    ease: "expo.inOut",
   }, 'a');
 
   tl.from('#sidemenu h2', {
