@@ -246,6 +246,7 @@ window.addEventListener('load', function () {
   })
 
   tl.to('.loader', {
+    borderRadius: '0px',
     height: 0,
     padding: 0,
     overflow: 'hidden',
