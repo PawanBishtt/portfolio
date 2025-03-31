@@ -2,23 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: neuer;
+    font-family: "Inter", sans-serif;
     color: #1c1d20;
-}
-
-@font-face {
-  font-family: neuer;
-  src: url(assets/fonts/NeueMontreal-Regular.otf);
-}
-
-@font-face {
-  font-family: neuem;
-  src: url(assets/fonts/NeueMontreal-Medium.otf);
-}
-
-@font-face {
-  font-family: neuel;
-  src: url(assets/fonts/NeueMontreal-Light.otf);
 }
 
 html,
@@ -209,9 +194,7 @@ section {
 }
 
 .hero h1 {
-  width: 70%;
-    font-size: 6vw;
-    font-family: neuel;
+  font-size: 6vw;
 }
 
 .radius {
