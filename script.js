@@ -133,7 +133,7 @@ if (window.matchMedia("(min-width: 1025px)").matches) {
         trigger: '.contact',
         scroller: '.main',
         scrub: 2,
-        start: 'top 55%',
+        start: 'top 60%',
         end: 'top 0%',
       }
     })
@@ -156,6 +156,29 @@ if (window.matchMedia("(min-width: 1025px)").matches) {
   }
   workbtn()
 }
+
+function graphics() {
+  gsap.to('.graphics .row1', {
+    x: -200,
+    scrollTrigger: {
+      trigger: '.graphics',
+      scroller: '.main',
+      start: 'top 50%',
+      scrub: 2,
+    }
+  })
+
+  gsap.to('.graphics .row2', {
+    x: 200,
+    scrollTrigger: {
+      trigger: '.graphics',
+      scroller: '.main',
+      start: 'top 50%',
+      scrub: 2,
+    }
+  })
+}
+graphics()
 
 function textsplit() {
   gsap.from('.part1-right p span', {

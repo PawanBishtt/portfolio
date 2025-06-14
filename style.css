@@ -198,7 +198,7 @@ nav .right-nav2 i{
 
 .hero-left {
   position: absolute;
-  top: 45%;
+  top: 40%;
   width: 18vw;
   height: 15vh;
   display: flex;
@@ -235,7 +235,7 @@ nav .right-nav2 i{
   display: flex;
   flex-direction: column;
   gap: 1vw;
-  top: 45%;
+  top: 40%;
   right: 10%;
 }
 
@@ -372,7 +372,7 @@ nav .right-nav2 i{
 .part-2 {
   min-height: 100vh;
   padding: 0vw 15vw;
-  margin: 20vw 0vw;
+  margin: 10vw 0vw;
 }
 
 .tworight .right-elem {
@@ -425,7 +425,7 @@ nav .right-nav2 i{
   border-bottom-left-radius: 100%;
   border-bottom-right-radius: 100%;
   position: absolute;
-  bottom: 15%;
+  bottom: 12%;
   scale: 1.2;
   z-index: 99;
 }
@@ -559,6 +559,16 @@ nav .right-nav2 i{
   animation: jello-horizontal 0.5s both;
   background-color: #455ce9;
   border: 1px solid #455ce9;
+}
+
+.graphics h1, .bento h1 {
+  font-size: 2vw;
+  color: #18181a;
+}
+
+.bento {
+  margin: 0 auto;
+  padding: 15rem 0;
 }
 
 @keyframes jello-horizontal {
