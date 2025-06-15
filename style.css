@@ -236,7 +236,7 @@ nav .right-nav2 i{
   flex-direction: column;
   gap: 1vw;
   top: 40%;
-  right: 10%;
+  right: 5%;
 }
 
 .hero-right i {
@@ -245,7 +245,7 @@ nav .right-nav2 i{
 }
 
 .hero-right h2 {
-  font-size: 2vw;
+  font-size: 1.5vw;
   font-weight: 400;
 }
 
