@@ -195,3 +195,26 @@ function sidebar() {
   }
   
   sidebar();
+
+  function graphics() {
+    gsap.to('.graphics .row1', {
+      x: -200,
+      scrollTrigger: {
+        trigger: '.graphics',
+        scroller: '.main',
+        start: 'top 50%',
+        scrub: 2,
+      }
+    })
+  
+    gsap.to('.graphics .row2', {
+      x: 200,
+      scrollTrigger: {
+        trigger: '.graphics',
+        scroller: '.main',
+        start: 'top 50%',
+        scrub: 2,
+      }
+    })
+  }
+  graphics()
