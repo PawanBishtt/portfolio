@@ -212,29 +212,40 @@ class WebsiteAnimations {
 
   // Loading animation sequence
   initLoadingAnimation() {
-    window.addEventListener('load', () => {
-      const loader = document.querySelector('.loader');
-      if (!loader) return;
+    const loader = document.querySelector('.loader');
+    if (!loader) return;
 
-      const tl = gsap.timeline();
-      
-      // Animate through load texts
-      for (let i = 1; i <= 5; i++) {
-        tl.to(`.loader .loadtext${i}`, { opacity: 1, duration: 0.2 })
-          .to(`.loader .loadtext${i}`, { opacity: 0, duration: 0.2 });
+    // Start loading text animation immediately
+    const tl = gsap.timeline();
+    
+    // Animate through load texts
+    for (let i = 1; i <= 5; i++) {
+      tl.to(`.loader .loadtext${i}`, { opacity: 1, duration: 0.2 })
+        .to(`.loader .loadtext${i}`, { opacity: 0, duration: 0.2 });
+    }
+
+    // Wait for window load, then hide loader
+    tl.call(() => {
+      // This ensures we wait for actual page load before hiding
+      if (document.readyState === 'complete') {
+        this.hideLoader();
+      } else {
+        window.addEventListener('load', () => this.hideLoader());
       }
+    });
+  }
 
-      // Hide loader
-      tl.to('.loader', {
-        borderRadius: '0px',
-        height: 0,
-        padding: 0,
-        overflow: 'hidden',
-        duration: 1,
-        ease: "expo.inOut",
-      }).to('.loader', {
-        display: 'none'
-      });
+  // Separate method to hide the loader
+  hideLoader() {
+    gsap.to('.loader', {
+      borderRadius: '0px',
+      height: 0,
+      padding: 0,
+      overflow: 'hidden',
+      duration: 1,
+      ease: "expo.inOut",
+    }).then(() => {
+      gsap.set('.loader', { display: 'none' });
     });
   }
 
