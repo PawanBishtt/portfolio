@@ -126,7 +126,7 @@ body {
 .hero {
   position: relative;
   height: 100vh;
-  background-image: url(https://images.pexels.com/photos/691668/pexels-photo-691668.jpeg);
+  background-image: url('assets/img/bg.jpg');
   background-position: center;
   background-size: cover;
 }
@@ -760,8 +760,12 @@ nav .right-nav2 i{
     display: none;
   }
 
+  .globe img {
+    scale: 2;
+  }
+
   .hero-right h2 {
-    font-size: 7vw;
+    font-size: 5vw;
   }
 
   .hero-right i {
@@ -771,6 +775,7 @@ nav .right-nav2 i{
   .hero-right {
     top: 75%;
     right: 50%;
+    margin-inline-start: 1rem;
   }
 
   .hero .pawan {

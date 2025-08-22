@@ -242,11 +242,38 @@ class WebsiteAnimations {
       height: 0,
       padding: 0,
       overflow: 'hidden',
-      duration: 1,
+      duration: 1.5,
       ease: "expo.inOut",
     }).then(() => {
       gsap.set('.loader', { display: 'none' });
     });
+
+    gsap.matchMedia().add("(min-width: 1024px)", () => {
+      gsap.set('.hero', { backgroundSize: '400%' });    
+      gsap.to('.hero', {
+          y: 0,
+          backgroundSize: '100%',
+          duration: 1.5,
+          ease: "expo.inOut"
+      });
+  });
+
+    gsap.from('.hero-left',{
+        y: 600,
+        duration: 1.5,
+        ease: "expo.inOut",
+    })
+    gsap.from('.hero-right',{
+        y: 600,
+        duration: 1.5,
+        ease: "expo.inOut",
+    })
+    gsap.from('.pawan',{
+        y: 600,
+        duration: 1.5,
+        ease: "expo.inOut",
+    })
+    
   }
 
   // Sidebar menu functionality
