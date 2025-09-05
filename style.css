@@ -372,7 +372,7 @@ nav .right-nav2 i{
 .part-2 {
   min-height: 100vh;
   padding: 0vw 15vw;
-  margin: 10vw 0vw;
+  margin: 20vw 0vw;
 }
 
 .tworight .right-elem {
@@ -425,7 +425,7 @@ nav .right-nav2 i{
   border-bottom-left-radius: 100%;
   border-bottom-right-radius: 100%;
   position: absolute;
-  bottom: 12%;
+  bottom: 15%;
   scale: 1.2;
   z-index: 99;
 }

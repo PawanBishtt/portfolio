@@ -134,7 +134,7 @@ class WebsiteAnimations {
         trigger: '.contact',
         scroller: '.main',
         scrub: 2,
-        start: 'top 60%',
+        start: 'top 55%',
         end: 'top 0%',
       }
     });
