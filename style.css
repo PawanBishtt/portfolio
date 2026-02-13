@@ -192,7 +192,7 @@ nav .right-nav2 {
   scale: 0;
 }
 
-nav .right-nav2 i{
+nav .right-nav2 i {
   font-size: 2vw;
 }
 
@@ -252,14 +252,18 @@ nav .right-nav2 i{
 .hero .pawan {
   position: absolute;
   bottom: 5%;
-  width: 190%;
+  white-space: nowrap;
   display: flex;
+  overflow-x: hidden;
 }
 
 .pawan h1 {
   font-size: 14vw;
   font-weight: 400;
-  animation: text 15s linear infinite;
+  flex-shrink: 0;
+  display: inline-block;
+  animation: text 10s linear infinite;
+  padding-right: 3vw;
 }
 
 .menu {
@@ -340,7 +344,7 @@ nav .right-nav2 i{
   overflow: hidden;
 }
 
-.part1-right p span{
+.part1-right p span {
   color: black;
   line-height: 2.3vw;
   font-size: 1.2vw;
@@ -561,7 +565,8 @@ nav .right-nav2 i{
   border: 1px solid #455ce9;
 }
 
-.graphics h1, .bento h1 {
+.graphics h1,
+.bento h1 {
   font-size: 2vw;
   color: #18181a;
 }
@@ -646,7 +651,7 @@ nav .right-nav2 i{
     padding: 25vw 7vw 0vw 7vw;
     transform: translateX(100%);
   }
-  
+
   #sidemenu p {
     font-size: 3vw;
     width: 100%;
@@ -657,7 +662,7 @@ nav .right-nav2 i{
     padding-bottom: 8vw;
     margin-bottom: 15vw;
   }
-  
+
   #sidemenu h2 {
     margin-top: 3vw;
     font-size: 12vw;
@@ -670,7 +675,7 @@ nav .right-nav2 i{
     justify-content: space-between;
     cursor: pointer;
   }
-  
+
   #sidemenu h2 i {
     font-size: 3.5vw;
     scale: 0;
@@ -680,19 +685,19 @@ nav .right-nav2 i{
   #sidemenu .home:active i {
     scale: 1;
   }
-  
+
   #sidemenu .work:active i {
     scale: 1;
   }
-  
+
   #sidemenu .about:active i {
     scale: 1;
   }
-  
+
   #sidemenu .contactt:active i {
     scale: 1;
   }
-  
+
   #sidemenu h5 {
     font-size: 3vw;
     font-weight: 400;
@@ -703,7 +708,7 @@ nav .right-nav2 i{
     border-top: 1px solid grey;
     padding-top: 5vw;
   }
-  
+
   #sidemenu .socials {
     width: 100%;
     margin: 0 auto;
@@ -713,7 +718,7 @@ nav .right-nav2 i{
     justify-content: space-between;
     font-size: 4.5vw;
   }
-  
+
   #sidemenu .socials a {
     text-decoration: none;
   }
@@ -725,11 +730,11 @@ nav .right-nav2 i{
     height: 17vw;
     font-size: 7vw;
   }
-  
+
   .menu #openbtn:hover {
     background-color: #334bd3;
   }
-  
+
   .menu #closebtn {
     top: 2%;
     right: 4%;
@@ -813,7 +818,7 @@ nav .right-nav2 i{
     margin-top: 15vw;
   }
 
-  .part1-right p span{
+  .part1-right p span {
     color: black;
     line-height: 6vw;
     font-size: 3.2vw;
@@ -924,7 +929,8 @@ nav .right-nav2 i{
     text-decoration: none;
   }
 
-  .graphics h1, .bento h1 {
+  .graphics h1,
+  .bento h1 {
     font-size: 6vw;
     color: #18181a;
   }
