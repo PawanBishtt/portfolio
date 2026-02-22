@@ -129,7 +129,7 @@ if (window.matchMedia("(min-width: 1025px)").matches) {
                 trigger: '.contact',
                 scroller: '.main',
                 scrub: 2,
-                start: 'top 55%',
+                start: 'top 35%',
                 end: 'top 10%',
             }
         })

@@ -6,7 +6,7 @@ class WebsiteAnimations {
       desktop: 1025,
       tablet: 950
     };
-    
+
     this.init();
   }
 
@@ -59,7 +59,7 @@ class WebsiteAnimations {
   // Initialize responsive animations
   initResponsiveAnimations() {
     this.initMenuAnimation();
-    
+
     if (this.matchesBreakpoint(this.breakpoints.desktop)) {
       this.initRightElementHover();
       this.initRadiusAnimation();
@@ -93,7 +93,7 @@ class WebsiteAnimations {
     rightElements.forEach((elem) => {
       const img = elem.querySelector('img');
       const h2 = elem.querySelector('h2');
-      
+
       if (!img || !h2) return;
 
       // Mouse enter effects
@@ -134,7 +134,8 @@ class WebsiteAnimations {
         trigger: '.contact',
         scroller: '.main',
         scrub: 2,
-        start: 'top 55%',
+        start: 'top 35%',
+        duration: 2,
         end: 'top 0%',
       }
     });
@@ -217,7 +218,7 @@ class WebsiteAnimations {
 
     // Start loading text animation immediately
     const tl = gsap.timeline();
-    
+
     // Animate through load texts
     for (let i = 1; i <= 5; i++) {
       tl.to(`.loader .loadtext${i}`, { opacity: 1, duration: 0.2 })
@@ -249,31 +250,31 @@ class WebsiteAnimations {
     });
 
     gsap.matchMedia().add("(min-width: 1024px)", () => {
-      gsap.set('.hero', { backgroundSize: '400%' });    
+      gsap.set('.hero', { backgroundSize: '400%' });
       gsap.to('.hero', {
-          y: 0,
-          backgroundSize: '100%',
-          duration: 1.5,
-          ease: "expo.inOut"
+        y: 0,
+        backgroundSize: '100%',
+        duration: 1.5,
+        ease: "expo.inOut"
       });
-  });
+    });
 
-    gsap.from('.hero-left',{
-        y: 600,
-        duration: 1.5,
-        ease: "expo.inOut",
+    gsap.from('.hero-left', {
+      y: 600,
+      duration: 1.5,
+      ease: "expo.inOut",
     })
-    gsap.from('.hero-right',{
-        y: 600,
-        duration: 1.5,
-        ease: "expo.inOut",
+    gsap.from('.hero-right', {
+      y: 600,
+      duration: 1.5,
+      ease: "expo.inOut",
     })
-    gsap.from('.pawan',{
-        y: 600,
-        duration: 1.5,
-        ease: "expo.inOut",
+    gsap.from('.pawan', {
+      y: 600,
+      duration: 1.5,
+      ease: "expo.inOut",
     })
-    
+
   }
 
   // Sidebar menu functionality
@@ -293,19 +294,19 @@ class WebsiteAnimations {
       backgroundColor: '#334bd3',
       border: 'none'
     }, 'a')
-    .to('.menu #closebtn', { scale: 1 }, 'a')
-    .to('.menu #openbtn', { scale: 0 }, 'a')
-    .to('#sidemenu', {
-      x: '0',
-      borderRadius: '0',
-      duration: 1.3,
-      ease: "expo.inOut",
-    }, 'a')
-    .from('#sidemenu h2', {
-      x: 500,
-      stagger: 0.05,
-      delay: 0.2
-    }, 'a');
+      .to('.menu #closebtn', { scale: 1 }, 'a')
+      .to('.menu #openbtn', { scale: 0 }, 'a')
+      .to('#sidemenu', {
+        x: '0',
+        borderRadius: '0',
+        duration: 1.3,
+        ease: "expo.inOut",
+      }, 'a')
+      .from('#sidemenu h2', {
+        x: 500,
+        stagger: 0.05,
+        delay: 0.2
+      }, 'a');
 
     // Event listeners for menu controls
     [navTrigger, openBtn].forEach(element => {
@@ -315,7 +316,7 @@ class WebsiteAnimations {
     closeBtn?.addEventListener('click', () => tl.reverse());
   }
 
-  // Method to destroy animations on cleanup
+   // Method to destroy animations on cleanup
   destroy() {
     if (this.locoScroll) {
       this.locoScroll.destroy();
@@ -335,7 +336,7 @@ class WebsiteAnimations {
 // Initialize animations when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   const animations = new WebsiteAnimations();
-  
+
   // Optional: Expose to window for debugging
   window.websiteAnimations = animations;
 });
